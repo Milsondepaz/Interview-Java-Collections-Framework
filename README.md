@@ -200,6 +200,60 @@ Yes, Collections class provides methods to make List, Set or Map elements as syn
 |  `public static Map synchronizedMap(Map m){}` |
 |  `public static SortedMap synchronizedSortedMap(SortedMap m){}` |
 
+## 21- What is the advantage of the generic collection?
+There are three main advantages of using the generic collection.
 
+- If we use the generic class, we don't need typecasting.
+- It is type-safe and checked at compile time.
+- Generic confirms the stability of the code by making it bug detectable at compile time.
 
+## 22- What is hash-collision in Hashtable and how it is handled in Java?
+Two different keys with the same hash value are known as hash-collision. Two separate entries will be kept in a single hash bucket to avoid the collision. There are two ways to avoid hash-collision.
+
+- Separate Chaining
+- Open Addressing
+
+## 23- What is the Dictionary class?
+The Dictionary class provides the capability to store key-value pairs.
+
+## 24- What is the default size of load factor in hashing based collection?
+The default size of load factor is 0.75. The default capacity is computed as initial capacity * load factor. For example, 16 * 0.75 = 12. So, 12 is the default capacity of Map
+
+## 25- What do you understand by fail-fast?
+The Iterator in java which immediately throws ConcurrentmodificationException, if any structural modification occurs in, is called as a Fail-fast iterator. Fail-fats iterator does not require any extra space in memory.
+
+## 26- What is the difference between Array and ArrayList?
+The main differences between the Array and ArrayList are given below.
+| Array | ArrayList |
+| ------------------- | ------------------- |
+| The Array is of fixed size, means we cannot resize the array as per need. | ArrayList is not of the fixed size we can change the size dynamically. |
+| Arrays are of the static type. | ArrayList is of dynamic size. |
+| Arrays can store primitive data types as well as objects. | ArrayList cannot store the primitive data types it can only store the objects. |
+
+## 27- What is the difference between the length of an Array and size of ArrayList?
+The length of an array can be obtained using the property of length whereas ArrayList does not support length property, but we can use size() method to get the number of objects in the list.
+
+**Finding the length of the array**
+```
+Int [] array = new int[4];  
+System.out.println("The size of the array is " + array.length); 
+```
+          
+**Finding the size of the ArrayList**
+```
+ArrayList<String> list=new ArrayList<String>();    
+list.add("ankit");    
+list.add("nippun");  
+System.out.println(list.size());  
+```
+
+## 28-  How to convert ArrayList to Array and Array to ArrayList?
+We can convert an Array to ArrayList by using the asList() method of Arrays class. asList() method is the static method of Arrays class and accepts the List object. Consider the following syntax:
+```
+Arrays.asList(item)  
+```
+We can convert an ArrayList to Array using toArray() method of the ArrayList class. Consider the following syntax to convert the ArrayList to the List object.
+```
+List_object.toArray(new String[List_object.size()])  
+```
 
