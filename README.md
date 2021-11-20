@@ -1,5 +1,6 @@
 # Java Collections Framework Questions
 
+
 ## 1- What is the Collection framework in Java?
 Collection Framework is a combination of classes and interface, which is used to store and manipulate the data in the form of objects. It provides various classes such as ArrayList, Vector, Stack, and HashSet, etc. and interfaces such as List, Queue, Set, etc. for this purpose.
 
