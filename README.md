@@ -257,3 +257,126 @@ We can convert an ArrayList to Array using toArray() method of the ArrayList cla
 List_object.toArray(new String[List_object.size()])  
 ```
 
+## 29- How to make Java ArrayList Read-Only?
+We can obtain java ArrayList Read-only by calling the Collections.unmodifiableCollection() method. When we define an ArrayList as Read-only then we cannot perform any modification in the collection through  add(), remove() or set() method.
+
+## 30- How to remove duplicates from ArrayList?
+There are two ways to remove duplicates from the ArrayList.
+
+Using HashSet: By using HashSet we can remove the duplicate element from the ArrayList, but it will not then preserve the insertion order.
+Using LinkedHashSet: We can also maintain the insertion order by using LinkedHashSet instead of HashSet.
+The Process to remove duplicate elements from ArrayList using the LinkedHashSet:
+
+- Copy all the elements of ArrayList to LinkedHashSet.
+- Empty the ArrayList using clear() method, which will remove all the elements from the list.
+- Now copy all the elements of LinkedHashset to ArrayList.
+
+## 31- How to reverse ArrayList?
+To reverse an ArrayList, we can use reverse() method of Collections class. Consider the following example.
+```
+import java.util.ArrayList;  
+import java.util.Collection;  
+import java.util.Collections;  
+import java.util.Iterator;  
+import java.util.List;  
+public class ReverseArrayList {  
+public static void main(String[] args) {  
+     List list = new ArrayList<>();  
+     list.add(10);  
+     list.add(50);  
+     list.add(30);  
+     Iterator i = list.iterator();  
+     System.out.println("printing the list....");  
+     while(i.hasNext())  
+     {  
+         System.out.println(i.next());  
+     }  
+     Iterator i2 = list.iterator();  
+     Collections.reverse(list);  
+     System.out.println("printing list in reverse order....");  
+     while(i2.hasNext())  
+     {  
+         System.out.println(i2.next());  
+     }  
+    }  
+}
+```
+**Output:**
+```
+printing the list....
+10
+50
+30
+printing list in reverse order....
+30
+50
+10
+```
+
+## 32- How to sort ArrayList in descending order?
+To sort the ArrayList in descending order, we can use the reverseOrder method of Collections class. Consider the following example.
+
+```
+import java.util.ArrayList;  
+import java.util.Collection;  
+import java.util.Collections;  
+import java.util.Comparator;  
+import java.util.Iterator;  
+import java.util.List;  
+  
+public class ReverseArrayList {  
+public static void main(String[] args) {  
+     List list = new ArrayList<>();  
+     list.add(10);  
+     list.add(50);  
+     list.add(30);  
+     list.add(60);  
+     list.add(20);  
+     list.add(90);  
+       
+     Iterator i = list.iterator();  
+     System.out.println("printing the list....");  
+     while(i.hasNext())  
+     {  
+         System.out.println(i.next());  
+     }  
+      
+    Comparator cmp = Collections.reverseOrder();  
+    Collections.sort(list,cmp);  
+     System.out.println("printing list in descending order....");  
+     Iterator i2 = list.iterator();  
+     while(i2.hasNext())  
+     {  
+         System.out.println(i2.next());  
+     }  
+       
+}  
+}  
+```
+**Output:**
+
+```
+printing the list....
+10
+50
+30
+60
+20
+90
+printing list in descending order....
+90
+60
+50
+30
+20
+10
+```
+
+## 33- How to synchronize ArrayList?
+We can synchronize ArrayList in two ways.
+
+- Using Collections.synchronizedList() method
+- Using CopyOnWriteArrayList<T>
+
+## 34- When to use ArrayList and LinkedList?
+LinkedLists are better to use for the update operations whereas ArrayLists are better to use for the search operations.
